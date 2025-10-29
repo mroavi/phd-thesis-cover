@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-# Record cbonsai while it's being printed
-asciinema rec cbonsai_v3.cast \
-  --command "bash -lc 'cbonsai -p; sleep 3'" \
-  --overwrite \
-  --quiet
+BONSAI_CMD="cbonsai -s 92 -l -t 0.001"
+
+# Record cbonsai inside a pseudo-terminal with a larger TTY
+script -qec \
+  "stty rows 24 cols 50; \
+   asciinema rec cbonsai_v3.cast \
+     --command '${BONSAI_CMD}' \
+     --overwrite \
+     --quiet" \
+  /dev/null
 
 # Convert to asciicast v2 format
 asciinema convert \
@@ -15,5 +20,5 @@ asciinema convert \
 npx svg-term \
   --in cbonsai_v2.cast \
   --out cbonsai_final.svg \
-  --window \
-  --no-cursor
+  --no-cursor \
+  --at 300
