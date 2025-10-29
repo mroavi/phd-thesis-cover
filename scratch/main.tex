@@ -1,0 +1,51 @@
+% !TeX program = lualatex
+
+\documentclass{article}
+\usepackage{color}
+\usepackage{hyperref}
+\newcommand{\ws}[1]{\textcolor[rgb]{0,0,0}{#1}}
+
+% Line spacing
+\usepackage{setspace}
+%\setlength{\baselineskip}{0pt}
+
+
+% Monospaced font options — uncomment ONE at a time to test
+
+\usepackage{sourcecodepro}       % Clean, modern (Adobe Source Code Pro)
+%\usepackage{inconsolata}         % Crisp, narrow, great readability
+%\usepackage{courier}             % Classic Courier (default TeX mono)
+%\usepackage[scaled]{beramono}    % Bitstream Vera Mono – balanced width
+%\usepackage{zi4}                 % Latin Modern Mono (lmtt), wider glyphs
+%\usepackage{dejavusansmono}      % DejaVu Sans Mono – full Unicode support
+%\usepackage{fontspec}            % (XeLaTeX/LuaLaTeX only)
+%\setmonofont{JetBrains Mono}     % Example of using system font
+%\setmonofont{Fira Code}          % Ligatures + friendly shapes
+%\setmonofont{Cascadia Code}      % Microsoft’s new dev font
+
+
+%c1  ← rgb(0.8, 0, 0)  [54 occurrence(s)]
+%c2  ← rgb(0.5, 0.5, 0.5)  [285 occurrence(s)]
+%c3  ← rgb(1, 0, 0)  [25 occurrence(s)]
+%c4  ← rgb(0, 0.8, 0)  [142 occurrence(s)]
+%c5  ← rgb(0.36, 0.36, 1)  [164 occurrence(s)]
+%c6  ← rgb(1, 1, 0)  [22 occurrence(s)]
+
+\usepackage{xcolor}
+\definecolor{c1}{HTML}{9399B2}
+\definecolor{c2}{HTML}{A6E3A1}
+\definecolor{c3}{HTML}{A6E3A1}
+\definecolor{c4}{HTML}{F9E2AF}
+\definecolor{c5}{HTML}{F9E2AF}
+\definecolor{c6}{HTML}{A6E3A1}
+
+\begin{document}
+
+\ttfamily%
+  \setstretch{0.06} % or \onehalfspacing, \singlespacing, or \doublespacing
+  %\renewcommand{\bfseries}{}   % prevent bold drift
+  \renewcommand{\itshape}{}    % prevent italics
+  %\setlength{\hsize}{\maxdimen}% let lines be infinitely long
+  \input{bonsai.tex}
+
+\end{document}

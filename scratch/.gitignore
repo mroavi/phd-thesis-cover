@@ -1,0 +1,77 @@
+# -----------------------------
+# LaTeX .gitignore template
+# -----------------------------
+
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Intermediate files
+*.nav
+*.snm
+*.vrb
+*.tmp
+*.tmp.*
+*.bak
+*.sav
+*.backup
+
+# Output files
+*.pdf
+*.dvi
+*.ps
+
+# Editor / IDE artifacts
+*~
+*.swp
+*.swo
+*.bak
+*.DS_Store
+Thumbs.db
+*.tmp
+*.out.ps
+*.out.pdf
+
+# VimTeX / latexmk build directories
+latex.out/
+build/
+_out/
+_texbuild/
+*.auxlock
+
+# Logs and transient files
+*.log.*
+*.err
+*.synctex.gz(busy)
+
+# Generated data or scripts
+bonsai.ans
+bonsai_raw.tex
+bonsai.tex
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Miscellaneous
+*.nav
+*.snm
+*.vrb
+*.synctex.gz
